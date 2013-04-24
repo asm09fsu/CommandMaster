@@ -1,6 +1,7 @@
 # CommandMaster #
 CommandMaster is designed as an iOS port of Windows Phone 8's [App Bar](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff431813\(v=vs.105\).aspx), with some added functionality.
 
+![](https://dl.dropboxusercontent.com/u/19779645/inAction.png)
 
 ### iOS CommandMaster v. WP8 App Bar 
 
