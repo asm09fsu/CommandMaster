@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE51C1F31727246700B7CFAE /* AMCommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51C1F01727246700B7CFAE /* AMCommandButton.m */; };
-		AE51C1F41727246700B7CFAE /* AMCommandMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51C1F21727246700B7CFAE /* AMCommandMaster.m */; };
 		AE5F87E8170BDD550041974D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5F87E7170BDD550041974D /* UIKit.framework */; };
 		AE5F87EA170BDD550041974D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5F87E9170BDD550041974D /* Foundation.framework */; };
 		AE5F87EC170BDD550041974D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5F87EB170BDD550041974D /* CoreGraphics.framework */; };
@@ -20,6 +18,8 @@
 		AE5F87FE170BDD550041974D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE5F87FD170BDD550041974D /* Default-568h@2x.png */; };
 		AE5F8801170BDD550041974D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5F87FF170BDD550041974D /* MainStoryboard.storyboard */; };
 		AE5F8804170BDD550041974D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5F8803170BDD550041974D /* ViewController.m */; };
+		AEAFCF101795CB56001A9449 /* AMCommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAFCF0D1795CB56001A9449 /* AMCommandButton.m */; };
+		AEAFCF111795CB56001A9449 /* AMCommandMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = AEAFCF0F1795CB56001A9449 /* AMCommandMaster.m */; };
 		AEEF1B471724615000CC544E /* saveIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF1B441724615000CC544E /* saveIcon.png */; };
 		AEEF1B481724615000CC544E /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF1B451724615000CC544E /* help.png */; };
 		AEEF1B491724615000CC544E /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = AEEF1B461724615000CC544E /* settings.png */; };
@@ -27,10 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AE51C1EF1727246700B7CFAE /* AMCommandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCommandButton.h; sourceTree = "<group>"; };
-		AE51C1F01727246700B7CFAE /* AMCommandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCommandButton.m; sourceTree = "<group>"; };
-		AE51C1F11727246700B7CFAE /* AMCommandMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCommandMaster.h; sourceTree = "<group>"; };
-		AE51C1F21727246700B7CFAE /* AMCommandMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCommandMaster.m; sourceTree = "<group>"; };
 		AE5F87E4170BDD550041974D /* CommandMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommandMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5F87E7170BDD550041974D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE5F87E9170BDD550041974D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +43,10 @@
 		AE5F8800170BDD550041974D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AE5F8802170BDD550041974D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AE5F8803170BDD550041974D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AEAFCF0C1795CB56001A9449 /* AMCommandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCommandButton.h; sourceTree = "<group>"; };
+		AEAFCF0D1795CB56001A9449 /* AMCommandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCommandButton.m; sourceTree = "<group>"; };
+		AEAFCF0E1795CB56001A9449 /* AMCommandMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCommandMaster.h; sourceTree = "<group>"; };
+		AEAFCF0F1795CB56001A9449 /* AMCommandMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCommandMaster.m; sourceTree = "<group>"; };
 		AEEF1B441724615000CC544E /* saveIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveIcon.png; sourceTree = "<group>"; };
 		AEEF1B451724615000CC544E /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		AEEF1B461724615000CC544E /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
@@ -67,17 +67,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AE51C1EE1727246700B7CFAE /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				AE51C1EF1727246700B7CFAE /* AMCommandButton.h */,
-				AE51C1F01727246700B7CFAE /* AMCommandButton.m */,
-				AE51C1F11727246700B7CFAE /* AMCommandMaster.h */,
-				AE51C1F21727246700B7CFAE /* AMCommandMaster.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		AE5F87DB170BDD550041974D = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +97,7 @@
 		AE5F87ED170BDD550041974D /* CommandMaster */ = {
 			isa = PBXGroup;
 			children = (
-				AE51C1EE1727246700B7CFAE /* Classes */,
+				AEAFCF0B1795CB56001A9449 /* Classes */,
 				AE5F87F6170BDD550041974D /* AppDelegate.h */,
 				AE5F87F7170BDD550041974D /* AppDelegate.m */,
 				AE5F87FF170BDD550041974D /* MainStoryboard.storyboard */,
@@ -135,6 +124,17 @@
 				AE5F87FD170BDD550041974D /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEAFCF0B1795CB56001A9449 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AEAFCF0C1795CB56001A9449 /* AMCommandButton.h */,
+				AEAFCF0D1795CB56001A9449 /* AMCommandButton.m */,
+				AEAFCF0E1795CB56001A9449 /* AMCommandMaster.h */,
+				AEAFCF0F1795CB56001A9449 /* AMCommandMaster.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,10 +208,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE5F87F4170BDD550041974D /* main.m in Sources */,
+				AEAFCF101795CB56001A9449 /* AMCommandButton.m in Sources */,
 				AE5F87F8170BDD550041974D /* AppDelegate.m in Sources */,
 				AE5F8804170BDD550041974D /* ViewController.m in Sources */,
-				AE51C1F31727246700B7CFAE /* AMCommandButton.m in Sources */,
-				AE51C1F41727246700B7CFAE /* AMCommandMaster.m in Sources */,
+				AEAFCF111795CB56001A9449 /* AMCommandMaster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

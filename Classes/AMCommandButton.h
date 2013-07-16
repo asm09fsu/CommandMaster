@@ -10,18 +10,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CommandButton : UIButton
+@interface AMCommandButton : UIButton
 
 - (id)initWithImage:(UIImage *)image andTitle:(NSString *)title;
 - (id)initWithImage:(UIImage *)image andTitle:(NSString *)title andMenuListItems:(NSArray *)items;
 
-+ (CommandButton *)createButtonWithImage:(UIImage *)image andTitle:(NSString *)title;
-+ (CommandButton *)createButtonWithImage:(UIImage *)image andTitle:(NSString *)title andMenuListItems:(NSArray *)items;
++ (AMCommandButton *)createButtonWithImage:(UIImage *)image andTitle:(NSString *)title;
++ (AMCommandButton *)createButtonWithImage:(UIImage *)image andTitle:(NSString *)title andMenuListItems:(NSArray *)items;
+
+- (void)setButtonColor:(UIColor *)color;
+- (void)setSelectedButtonColor:(UIColor *)color;
+- (void)setMenuListColor:(UIColor *)color;
 
 @property (nonatomic, readonly) bool containsMenuList;
 @property (nonatomic) bool showButtonTitle;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) UIColor *menuListColor;
 @property (nonatomic, strong) NSArray *menuListData;
 
 @end
