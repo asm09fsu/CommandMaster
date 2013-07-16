@@ -169,8 +169,8 @@ This is the button title that will show up within the bar. This is not necessary
 If you wish for the button to display as list of choices, you may add an array of choices. These choices **must be NSStrings**.
 
 ## Future Plans
- - Further optimizations of functions such as setButtonFrames & animateButtonFramesToState
- - Ability to customize colors of the bar and buttons.
+* Further optimizations of functions such as setButtonFrames & animateButtonFramesToState
+* ~~Ability to customize colors of the bar and buttons.~~ Completed but not all bugs fixed.
 
 
 ## Copyright
