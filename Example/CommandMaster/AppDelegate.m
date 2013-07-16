@@ -14,11 +14,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[CommandMaster sharedInstance] addButtons:@[[CommandButton createButtonWithImage:[UIImage imageNamed:@"saveIcon"] andTitle:@"save" andMenuListItems:@[@"menu item 1", @"menu item 2", @"menu item 3"]],
-     [CommandButton createButtonWithImage:[UIImage imageNamed:@"deleteIcon"] andTitle:@"delete"],
-     [CommandButton createButtonWithImage:[UIImage imageNamed:@"help"] andTitle:@"help"],
-     [CommandButton createButtonWithImage:[UIImage imageNamed:@"settings"] andTitle:@"settings"]]
+    [AMCommandMaster addButtons:@[[AMCommandButton createButtonWithImage:[UIImage imageNamed:@"saveIcon"] andTitle:@"save" andMenuListItems:@[@"menu item 1", @"menu item 2", @"menu item 3"]],
+     [AMCommandButton createButtonWithImage:[UIImage imageNamed:@"deleteIcon"] andTitle:@"delete"],
+     [AMCommandButton createButtonWithImage:[UIImage imageNamed:@"help"] andTitle:@"help"],
+     [AMCommandButton createButtonWithImage:[UIImage imageNamed:@"settings"] andTitle:@"settings"]]
                                       forGroup:@"TestGroup"];
+    
+    [AMCommandMaster addButtons:@[
+     [AMCommandButton createButtonWithImage:[UIImage imageNamed:@"help"] andTitle:@"help"],
+     [AMCommandButton createButtonWithImage:[UIImage imageNamed:@"settings"] andTitle:@"settings"]]
+                                      forGroup:@"TestGroup2"];
     
     // Override point for customization after application launch.
     return YES;

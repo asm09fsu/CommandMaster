@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE51C1F31727246700B7CFAE /* CommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51C1F01727246700B7CFAE /* CommandButton.m */; };
-		AE51C1F41727246700B7CFAE /* CommandMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51C1F21727246700B7CFAE /* CommandMaster.m */; };
+		AE51C1F31727246700B7CFAE /* AMCommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51C1F01727246700B7CFAE /* AMCommandButton.m */; };
+		AE51C1F41727246700B7CFAE /* AMCommandMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = AE51C1F21727246700B7CFAE /* AMCommandMaster.m */; };
 		AE5F87E8170BDD550041974D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5F87E7170BDD550041974D /* UIKit.framework */; };
 		AE5F87EA170BDD550041974D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5F87E9170BDD550041974D /* Foundation.framework */; };
 		AE5F87EC170BDD550041974D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5F87EB170BDD550041974D /* CoreGraphics.framework */; };
@@ -27,10 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AE51C1EF1727246700B7CFAE /* CommandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandButton.h; sourceTree = "<group>"; };
-		AE51C1F01727246700B7CFAE /* CommandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandButton.m; sourceTree = "<group>"; };
-		AE51C1F11727246700B7CFAE /* CommandMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandMaster.h; sourceTree = "<group>"; };
-		AE51C1F21727246700B7CFAE /* CommandMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandMaster.m; sourceTree = "<group>"; };
+		AE51C1EF1727246700B7CFAE /* AMCommandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCommandButton.h; sourceTree = "<group>"; };
+		AE51C1F01727246700B7CFAE /* AMCommandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCommandButton.m; sourceTree = "<group>"; };
+		AE51C1F11727246700B7CFAE /* AMCommandMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMCommandMaster.h; sourceTree = "<group>"; };
+		AE51C1F21727246700B7CFAE /* AMCommandMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMCommandMaster.m; sourceTree = "<group>"; };
 		AE5F87E4170BDD550041974D /* CommandMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommandMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5F87E7170BDD550041974D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE5F87E9170BDD550041974D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -70,10 +70,10 @@
 		AE51C1EE1727246700B7CFAE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AE51C1EF1727246700B7CFAE /* CommandButton.h */,
-				AE51C1F01727246700B7CFAE /* CommandButton.m */,
-				AE51C1F11727246700B7CFAE /* CommandMaster.h */,
-				AE51C1F21727246700B7CFAE /* CommandMaster.m */,
+				AE51C1EF1727246700B7CFAE /* AMCommandButton.h */,
+				AE51C1F01727246700B7CFAE /* AMCommandButton.m */,
+				AE51C1F11727246700B7CFAE /* AMCommandMaster.h */,
+				AE51C1F21727246700B7CFAE /* AMCommandMaster.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -210,8 +210,8 @@
 				AE5F87F4170BDD550041974D /* main.m in Sources */,
 				AE5F87F8170BDD550041974D /* AppDelegate.m in Sources */,
 				AE5F8804170BDD550041974D /* ViewController.m in Sources */,
-				AE51C1F31727246700B7CFAE /* CommandButton.m in Sources */,
-				AE51C1F41727246700B7CFAE /* CommandMaster.m in Sources */,
+				AE51C1F31727246700B7CFAE /* AMCommandButton.m in Sources */,
+				AE51C1F41727246700B7CFAE /* AMCommandMaster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +296,7 @@
 		AE5F8808170BDD550041974D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Alexander Muller";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CommandMaster/CommandMaster-Prefix.pch";
 				INFOPLIST_FILE = "CommandMaster/CommandMaster-Info.plist";
@@ -307,6 +308,7 @@
 		AE5F8809170BDD550041974D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Alexander Muller";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CommandMaster/CommandMaster-Prefix.pch";
 				INFOPLIST_FILE = "CommandMaster/CommandMaster-Info.plist";

@@ -8,30 +8,29 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import "CommandButton.h"
+#import "AMCommandButton.h"
 
-@interface CommandButton () {
+#define kDefaultButtonColor [UIColor whiteColor]
+#define kDefaultSelectionColor [UIColor darkGrayColor]
+
+@interface AMCommandButton () {
     UIImage *_image;
+    UIColor *_selectedColor;
+    UIColor *_mainColor;
 }
 @end
 
-@implementation CommandButton
-
-@synthesize containsMenuList = _containsMenuList,
-            showButtonTitle = _showButtonTitle,
-            image = _image,
-            title = _title,
-            menuListData = _menuListData;
+@implementation AMCommandButton
 
 - (id)initWithImage:(UIImage *)image andTitle:(NSString *)title {
-    CommandButton *temp = [[CommandButton alloc] initWithFrame:CGRectMake(0, 0, 60, 80)];
+    AMCommandButton *temp = [[AMCommandButton alloc] initWithFrame:CGRectMake(0, 0, 60, 80)];
     temp.image = image;
     temp.title = title;
     return temp;
 }
 
 - (id)initWithImage:(UIImage *)image andTitle:(NSString *)title andMenuListItems:(NSArray *)items {
-    CommandButton *temp = [[CommandButton alloc] initWithImage:image andTitle:title];
+    AMCommandButton *temp = [[AMCommandButton alloc] initWithImage:image andTitle:title];
     temp.menuListData = items;
     return temp;
 }
@@ -41,6 +40,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        _menuListColor = kDefaultButtonColor;
+        _selectedColor = kDefaultSelectionColor;
+        _mainColor = kDefaultButtonColor;
         _containsMenuList = false;
         _showButtonTitle = false;
         _menuListData = [[NSArray alloc] init];
@@ -48,14 +50,27 @@
     return self;
 }
 
-+ (CommandButton *)createButtonWithImage:(UIImage *)image andTitle:(NSString *)title {
-    return [[CommandButton alloc] initWithImage:image andTitle:title];
++ (AMCommandButton *)createButtonWithImage:(UIImage *)image andTitle:(NSString *)title {
+    return [[self alloc] initWithImage:image andTitle:title];
 }
 
-+ (CommandButton *)createButtonWithImage:(UIImage *)image andTitle:(NSString *)title andMenuListItems:(NSArray *)items {
-    return [[CommandButton alloc] initWithImage:image andTitle:title andMenuListItems:items];
++ (AMCommandButton *)createButtonWithImage:(UIImage *)image andTitle:(NSString *)title andMenuListItems:(NSArray *)items {
+    return [[self alloc] initWithImage:image andTitle:title andMenuListItems:items];
 }
 
+- (void)setButtonColor:(UIColor *)color {
+    _mainColor = color;
+    [self setNeedsDisplay];
+}
+
+- (void)setSelectedButtonColor:(UIColor *)color {
+    _selectedColor = color;
+    [self setNeedsDisplay];
+}
+
+- (void)setMenuListColor:(UIColor *)color {
+    _menuListColor = color;
+}
 
 - (void)drawRect:(CGRect)rect
 {
@@ -66,11 +81,11 @@
     
     // Check to see if either the button is pressed or disabled
     if (self.highlighted || !self.enabled) {
-        CGContextSetStrokeColorWithColor(context, [UIColor darkGrayColor].CGColor);
-        CGContextSetFillColorWithColor(context, [UIColor darkGrayColor].CGColor);
+        CGContextSetStrokeColorWithColor(context, _selectedColor.CGColor);
+        CGContextSetFillColorWithColor(context, _selectedColor.CGColor);
     } else {
-        CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
-        CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+        CGContextSetStrokeColorWithColor(context, _mainColor.CGColor);
+        CGContextSetFillColorWithColor(context, _mainColor.CGColor);
     }
     
     CGContextSaveGState(context);

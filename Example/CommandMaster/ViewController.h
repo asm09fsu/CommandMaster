@@ -10,6 +10,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <CommandMasterDelegate>
+@interface Color : NSObject
+
+@property (nonatomic, strong) UIColor *color;
+@property (nonatomic, strong) NSString *name;
+
++ (id)createColor:(UIColor *)color withName:(NSString *)name; 
+
+@end
+
+@interface ViewController : UIViewController <CommandMasterDelegate, UIPickerViewDelegate>
 
 @end
