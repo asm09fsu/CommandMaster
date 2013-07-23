@@ -382,6 +382,9 @@ static AMCommandMaster *_sharedInstance = nil;
             [obj setMenuListColor:accent];
         }
     }];
+//    if (include) {
+//        [_menuList setNeedsDisplay];
+//    }
     [self setNeedsDisplay];
 }
 
@@ -408,14 +411,12 @@ static AMCommandMaster *_sharedInstance = nil;
     [self setNeedsDisplay];
 }
 
+
 - (void)setBackgroundColor:(UIColor *)color forGroup:(NSString *)group includeMenuList:(BOOL)include {
     if(![self checkForExistenceOfKey:group]) {
         return;
     }
     [_appearanceContainer[group] setBackgroundColor:color];
-    if (include) {
-        [_appearanceContainer[group] setMenuListColor:color];
-    }
     [self setNeedsDisplay];
 }
 
@@ -643,12 +644,13 @@ static AMCommandMaster *_sharedInstance = nil;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
-        cell.contentView.backgroundColor = self.backgroundColor;
         cell.textLabel.font = [UIFont fontWithName:@"Avenir-Light" size:18];
-        cell.textLabel.textColor = [_selectedButton menuListColor];
         cell.textLabel.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+#warning See if we want to do custom uitableview color, for now it will inherit background color
+    cell.contentView.backgroundColor = [_appearanceContainer[_currentGroup] backgroundColor];
+    cell.textLabel.textColor = [_selectedButton menuListColor];
     cell.textLabel.text = [[_menuListDataSource objectAtIndex:indexPath.row] lowercaseString];
     return cell;
 }
